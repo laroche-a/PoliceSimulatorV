@@ -1,9 +1,15 @@
-# POLSIM V
-
-# BUILDING FIVEM RESSOURCE
+# Building FiveM Server Ressource
 -Open POLSIM.sln in Visual Studio to edit code
+
 -Run build.cmd to create FiveM server ressource
+
 -Files will be placed in the dist folder.
+
+-Copy the dist folder to your FiveM server and add appropriate #ensure line to your server.cfg.
+
+
+
+# Police Simulator V for FiveM
 
 ![Description](https://forum-cfx-re.akamaized.net/original/5X/f/1/f/2/f1f2532b0fc481ea99442f45a9f2ded4e691bce7.jpeg)
 

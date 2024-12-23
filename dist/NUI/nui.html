@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Police Simulator V NUI</title>
+  <link rel="stylesheet" href="nui.css">
+  <script src="nui.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&amp;display=swap" rel="stylesheet">
+  
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+</head>
+<body>
+  <div class="license" id="license" style="display: none;">
+    <!-- style="display: none;"  -->
+    <!-- Display the template image of the driver's license -->
+    <img src="img/sa-drivers-license.png" alt="Driver's License Template" id="licenseImage"> <!-- Text fields -->
+    <div class="text-field-license-red" id="licenseNumber">
+      L1234567
+    </div>
+    <div class="text-field-license-red" id="expDate">
+      01/01/2023
+    </div>
+    <div class="text-field-license" id="lastName">
+      DOE
+    </div>
+    <div class="text-field-license" id="firstName">
+      JOHN
+    </div>
+    <div class="text-field-license-red" id="dob">
+      01/01/1950
+    </div>
+    <div class="text-field-license" id="rstr">
+      NONE
+    </div>
+    <div class="text-field-license" id="class">
+      C
+    </div>
+    <div class="text-field-license" id="end">
+      NONE
+    </div>
+    <div class="text-field-license-confirmation-grey" id="confNumb1">
+      00000000
+    </div>
+    <div class="text-field-license-confirmation-trans" id="confNumb2">
+      00000000
+    </div>
+    <div class="text-field-license" id="sex">
+      M
+    </div>
+    <div class="text-field-license" id="issue">
+      01/01/2020
+    </div>
+    <div class="text-field-license-signature" id="signature">
+      John Doe
+    </div>
+    <!--<div class="driver-photo" id="driverPhoto">
+        <img src="img/driver-photo.jpg" alt="Driver's Photo" id="driverPhotoImage">
+    </div>-->
+  </div><!-- Vehicle Registration Section -->
+  <div class="vehicleRegistration" id="vehicleRegistration" style="display: none;">
+    <img src="img/veh-reg.png" alt="Vehicle Registration Template" id="registrationImage">
+    <div class="text-field-reg" id="vehModel">
+      BALLER
+    </div>
+    <div class="text-field-reg" id="bodyType">
+      PC
+    </div>
+    <div class="text-field-reg" id="typeVehicleuse">
+      PERSONAL
+    </div>
+    <div class="text-field-reg" id="registeredOwner">
+      JOHN DOE
+    </div>
+    <div class="text-field-reg" id="typeVeh">
+      1
+    </div>
+    <div class="text-field-reg" id="licenseNumberVehicle">
+      7A000285
+    </div>
+    <div class="text-field-reg" id="vehicleIDNumber">
+      1FTKR1EE0BPA25225
+    </div>
+    <div class="text-field-reg" id="startDate">
+      01/01/2015
+    </div>
+    <div class="text-field-reg" id="endDate">
+      01/01/2025
+    </div><!-- Add more fields as needed -->
+  </div>
+  <div class="windowsui" id="uiwin95id" style="display: none;">
+<div class="title-bar">
+    <div class="title-content">
+        <div class="app-icon"></div>
+        <div class="program-name">
+            MDC Workstation 1.1
+        </div>
+    </div>
+    <div class="window-buttons">
+		<div class="minimize-button">—</div>
+		<div class="exit-button">X</div>
+    </div>
+</div>
+    <div class="toolbar">
+      <!-- Button for MASTER CHECK -->
+      <button class="toolbar-button" id="homeButton">HOME</button> <button class="toolbar-button" id="myProfileButton">MY PROFILE</button> <button class="toolbar-button" id="myDeptButton">MY DEPARTMENT</button> <button class="toolbar-button" id="masterCheckButton">MASTER CHECK</button> <button class="toolbar-button" id="dispatchButton">DISPATCH</button> <button class="toolbar-button" id="servicesButton">SERVICES</button> <!--button class="toolbar-button" id="arrestsButton">ARREST</button> <button class="toolbar-button" id="arrestReportsButton">ARREST REPORTS</button>-->
+       <!--<button class="toolbar-button" id="masterCheckButton">MY PROFILE</button>-->
+       <!-- Add more buttons here if needed -->
+    </div><!-- Container for different pages -->
+    <div class="pages">
+      <!-- Page 1 (Initial Page) -->
+      <div class="page" id="page1">
+        <!-- Contents of the initial page -->
+		<h4>Welcome.</h4>
+		<p>You're logged in as <b id="department"></b> <b>/</b> <b id="rank"></b> <b id="name"></b>.</p>
+      </div><!-- Page 2 (Page opened by MASTER CHECK) -->
+    <!-- Page 2 (Page opened by MASTER CHECK) -->
+    <div class="page" id="page2">
+      <!-- Contents of the page opened by MASTER CHECK -->
+      <h4>MASTER CHECK: Select search type below.</h4>
+      <button class="search-button" id="searchByNameButton">Search Full Name</button>
+      <!-- <button class="search-button" id="searchPlateButton">Search License Plate</button> -->
+      <!-- <button class="search-button" id="searchRegLicButton">Search Registration License Number</button><br><br> -->
+
+		<div id="searchByNameForm" style="display: none;">
+		  <div class="form-container">
+			<input type="text" id="firstNameInput" placeholder="First Name">
+			<input type="text" id="lastNameInput" placeholder="Last Name">
+			<button class="submit-button" id="submitNameSearchButton">Submit</button>
+		  </div>
+		</div>
+
+      <div id="searchByIDForm" style="display: none;">
+        <input type="text" id="idNumberInput" placeholder="ID Number">
+        <button class="submit-button" id="submitIDSearchButton">Submit</button>
+        <br>
+      </div>
+
+      <!-- Input field for license plate number -->
+      <div id="searchByPlateForm" style="display: none;">
+        <input type="text" id="licensePlateInput" placeholder="License Plate Number">
+        <button class="submit-button" id="submitPlateSearchButton">Submit</button>
+        <br>
+      </div>
+
+      <!-- Input field for registration license number -->
+      <div id="searchByRegLicForm" style="display: none;">
+        <input type="text" id="regLicInput" placeholder="Registration License Number" style="width: 200px;">
+        <button class="submit-button" id="submitRegLicSearchButton">Submit</button>
+        <br>
+      </div>
+
+      <!-- Error message -->
+      <div id="errorMessage" style="display: none; color: red;">
+        NO MATCH FOUND.
+      </div>
+        <div class="content">
+          <!-- Placeholder elements for received data -->
+          <div class="details">
+            <ul>
+              <p><strong>Firstname:</strong> <span id="fntest"></span></p>
+              <p><strong>Lastname:</strong> <span id="lntest"></span></p>
+              <p><strong>DOB:</strong> <span id="dobtest"></span></p>
+              <p><strong>Age:</strong> <span id="age"></span></p>
+              <p><strong>Gender:</strong> <span id="sextest"></span></p>
+              <p><strong>Race:</strong> <span id="race"></span></p>
+              <p><strong>Height:</strong> <span id="height"></span></p>
+            </ul>
+            <ul>
+              <p><strong>Address:</strong> <span id="address"></span></p>
+              <p><strong>Apt Number:</strong> <span id="aptNumber"></span></p>
+              <p><strong>Phone Number:</strong> <span id="phoneNumber"></span></p>
+            </ul>
+            <ul>
+              <p><strong>License Number:</strong> <span id="driversLicenseNumber"></span></p>
+              <p><strong>Confirmation Number:</strong> <span id="driversLicenseConfirmationNumber"></span></p>
+              <p><strong>Valid:</strong> <span id="isDriversLicenseValid"></span></p>
+              <p><strong>DMV Comment:</strong> <span id="driversLicenseReason"></span></p>
+              <p><strong>Issue Date:</strong> <span id="driversLicenseIssue"></span></p>
+              <p><strong>Expiry Date:</strong> <span id="driversLicenseExp"></span></p>
+              <p><strong>Class:</strong> <span id="driversLicenseClass"></span></p>
+              <p><strong>Commercial License:</strong> <span id="isDriversLicenseCommercial"></span></p>
+              <p><strong>Donor:</strong> <span id="isDonor"></span></p>
+              <p><strong>Registered Vehicle(s):</strong> <span id="registeredVehicle"></span></p>
+            </ul>
+            <ul>
+              <p><strong>Firearms License Holder:</strong> <span id="hasFirearmLicense"></span></p>
+              <p><strong>Valid Status:</strong> <span id="isFirearmLicenseValid"></span></p>
+              <p><strong>Licensing Bureau Comment:</strong> <span id="firearmLicenseReason"></span></p>
+              <p><strong>License Type:</strong> <span id="firearmLicenseType"></span></p>
+            </ul><!-- Container for events -->
+            <div id="eventsContainer">
+              <!-- Events will be appended here dynamically -->
+            </div><!-- Container for events -->
+            <div id="warrantsContainer">
+              <!-- Events will be appended here dynamically -->
+            </div>
+          </div>
+        </div>
+      </div><!-- Page 3 (Page opened by DISPATCH BUTTON) -->
+<div class="page" id="page3">
+    <!-- Contents of the page opened by DISPATCH BUTTON -->
+    <h4>DISPATCH PAGE: Latest entries</h4>
+    <div id="latestCalls">
+        <table id="calloutTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Postal</th>
+                    <th>Callout Type</th>
+                    <th>Comment</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="calloutTableBody">
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Add the elements for dispatch data -->
+    <div id="dispatchData">
+        <p id="callId"></p>
+        <p id="currentTime"></p>
+        <p id="location"></p>
+        <p id="postal"></p>
+        <p id="calloutType"></p>
+        <p id="comment"></p>
+        <p id="priority"></p>
+    </div>
+</div>
+
+<!-- Page 4 (Page opened by SERVICES) -->
+<div class="page" id="page4">
+    <!-- Contents of the page opened by SERVICES -->
+    <h4>Field Support & Services Page</h4>
+
+    <!-- Contacts Table -->
+    <table class="contacts-table">
+        <thead>
+            <tr>
+                <th>SERVICE TYPE</th>
+                <th>AGENCY/COMPANY</th>
+                <th>DETAILS</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TOWING - FLATBED</td>
+                <td>Davis Towing Impound</td>
+                <td>Use the /reqtow command to request a flatbed towtruck. Mark the vehicle to tow by pressing E while next to it.</td>
+                <td><img src="img/DavisTowing.png" alt="Davis Towing Image"></td>
+            </tr>
+            <tr>
+                <td>CORONER</td>
+                <td>Los Santos County Coroner Office</td>
+                <td>This service is currently marked unavailable. Refer to an EMS agency for body transport.</td>
+                <td><img src="img/CoronerImage.png" alt="Coroner Image"></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<div class="page" id="page5">
+    <!-- Contents of the page opened by SERVICES -->
+    <h4>CREATE A NEW ARREST REPORT</h4>
+    <form id="arrestForm" name="arrestForm">
+        <div class="form-group">
+            <label for="officerName">ARRESTING OFFICER IDENTIFICATION</label>
+            <div class="form-inline">
+                <input type="text" id="officerName" name="officerName" required="" placeholder="Firstname Lastname">
+                <input type="text" id="officerID" name="officerID" required="" placeholder="Badge Number">
+                <input type="text" id="unitNumber" name="unitNumber" required="" placeholder="Unit Number">
+            </div>
+        </div>
+
+        <!-- Add a space here -->
+        <div style="margin-bottom: 10px;"></div>
+
+        <div class="form-group">
+            <label for="suspectName">SUSPECT IDENTIFICATION</label>
+            <div class="form-inline">
+                <input type="text" id="suspectName" name="suspectName" required="" placeholder="Firstname Lastname">
+                <span>ID Type:</span>
+                <select id="identifiedWith" name="identifiedWith" required="">
+                    <option value="">Select</option>
+                    <option value="DriversLicense">Driver's License</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="identificationNumber" name="identificationNumber" required="" placeholder="Identification Number">
+            </div>
+        </div>
+
+        <!-- Add a space here -->
+        <div style="margin-bottom: 10px;"></div>
+
+        <div class="form-group">
+            <textarea id="officersReport" name="officersReport" rows="8" cols="50" required="" placeholder="Enter officer's report here..."></textarea>
+        </div>
+
+        <!-- Add a space here -->
+        <div style="margin-bottom: 10px;"></div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="confirmCheck" name="confirmCheck" required="">
+            <label for="confirmCheck">I have reviewed the above information and confirm it is correct.</label>
+        </div>
+
+        <!-- Add a space here -->
+        <div style="margin-bottom: 10px;"></div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+    </form>
+	<br><div id="messageContainer"></div>
+</div>
+
+<div class="page" id="page6">
+    <!-- Contents of the page opened by DISPATCH BUTTON -->
+    <h4>COMPLETED ARREST REPORTS LIST</h4> <button id="refreshButton">REFRESH</button>
+    <div id="arrestsContainer"></div>
+	<div id="pagination"></div>
+</div>
+
+<!-- Page 7 (Department Members) -->
+    <div class="page" id="page7">
+        <div class="section">
+            <div class="section-title">My Department</div>
+            <div id="department-content"></div>
+        </div>
+    </div>
+        
+
+<div class="page" id="page8">
+  <h4>My Profile</h4>
+  <div class="identity-card">
+    <!-- Department Logo -->
+    <img id="department-logo" src="" alt="Department Logo">
+    <!-- Profile Details -->
+    <div class="profile-details">
+      <div class="profile-field">
+        <span id="player-agency"></span>
+      </div>
+      <div class="profile-field">
+        <label>NAME:</label>
+        <span id="player-name"></span>
+      </div>
+      <div class="profile-field">
+        <label>RANK:</label>
+        <span id="player-rank"></span>
+      </div>
+      <div class="profile-field">
+        <label>SERIAL:</label>
+        <span id="player-badge"></span>
+      </div>
+      <div class="profile-field">
+        <label>ASSIGNMENT:</label>
+        <span id="player-division"></span>
+      </div>
+      <!-- New Profile Field for Experience, Arrests, and Citations -->
+      <div class="profile-field">
+        <label>Experience:</label>
+        <span id="player-experience"></span> |
+        <label>Arrests:</label>
+        <span id="player-arrests"></span> |
+        <label>Citations:</label>
+        <span id="player-citations"></span>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  
+         <div id="notification" style="display: none;">
+            <div id="notification-box">
+                <div id="text">
+                    Nothing
+                </div>
+            </div>
+        </div>
+		
+        <div id="interaction-menu" style="display: none;">
+            <div id="interaction-box">
+                <div id="interaction-text">
+                    Nothing
+                </div>
+            </div>
+        </div>
+ 
+</body>
+</html>

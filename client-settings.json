@@ -1,0 +1,11 @@
+[
+	{
+	  "EnableTrafficEvents": 1,
+	  "NoBrakeLightsProbability": 0.20,
+	  "FlatTireProbability": 0.20,
+	  "BrokenWindowsProbability": 0.20,
+	  "BrokenDownVehicleProbability": 0.05,
+	  "SmokingEngineProbability": 0.15,
+	  "SpeedingProbability": 0.20
+	}
+]

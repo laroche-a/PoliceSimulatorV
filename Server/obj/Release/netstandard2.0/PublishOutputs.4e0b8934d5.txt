@@ -1,0 +1,6 @@
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\POLSIM.Server.net.dll
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\POLSIM.Server.deps.json
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\POLSIM.Server.net.pdb
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\CitizenFX.Core.Server.dll
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\Microsoft.CSharp.dll
+C:\FXDev\POLSIM\Server\bin\Release\netstandard2.0\publish\Newtonsoft.Json.dll

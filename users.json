@@ -1,0 +1,35 @@
+[
+  {
+    "Username": "TestUser0",
+    "LicenseIdentifier": "54f3ddf9933370c5ccaae2a3617b514f0354f848",
+    "DeptNameShort": "DOA",
+    "Rank": "Rank4",
+	"Division": "Division1",
+	"Badge": "4100",
+	"Xp": 0,
+	"Arrests": 0,
+	"Citations": 0
+  },
+  {
+    "Username": "TestUser1",
+    "LicenseIdentifier": "license1",
+    "DeptNameShort": "LSPD",
+    "Rank": "Rank1",
+	"Division": "Division1",
+	"Badge": "4200",
+	"Xp": 0,
+	"Arrests": 0,
+	"Citations": 0
+  },
+   {
+    "Username": "TestUser3",
+    "LicenseIdentifier": "license2",
+    "DeptNameShort": "DOA",
+    "Rank": "Rank2",
+	"Division": "Division1",
+	"Badge": "4300",
+	"Xp": 0,
+	"Arrests": 0,
+	"Citations": 0
+  }
+]

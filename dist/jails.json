@@ -1,0 +1,65 @@
+[
+	{
+	  "owner": "LSPD",
+	  "textTag": "MISSION ROW PROCESSING",
+	  "X": 463.9468,
+	  "Y": -997.376,
+	  "Z": 24.91487
+	},
+	{
+	  "owner": "LSPD",
+	  "textTag": "VESPUCCI PROCESSING",
+	  "X": -1113.091,
+	  "Y": -849.0481,
+	  "Z": 13.44671
+	},
+	{
+	  "owner": "LSPD",
+	  "textTag": "ROCKFORD HILLS PROCESSING",
+	  "X": -569.6656,
+	  "Y": -147.1709,
+	  "Z": 37.95125
+	},
+	{
+	  "owner": "LSSD",
+	  "textTag": "DAVIS PROCESSING",
+	  "X": 371.3758,
+	  "Y": -1609.097,
+	  "Z": 29.29195
+	},
+	{
+	  "owner": "LSPD",
+	  "textTag": "VINEWOOD PROCESSING",
+	  "X": 534.3446,
+	  "Y": -26.7337,
+	  "Z": 70.62953
+	},
+	{
+	  "owner": "LSSD",
+	  "textTag": "LA MESA PROCESSING",
+	  "X": 855.5143,
+	  "Y": -1280.069,
+	  "Z": 26.52147
+	},
+	{
+	  "owner": "LSSD",
+	  "textTag": "SANDY SHORES PROCESSING",
+	  "X": 1853.82,
+	  "Y": 3701.873,
+	  "Z": 34.2682
+	},
+	{
+	  "owner": "LSDRP",
+	  "textTag": "BEAVER BUSH PROCESSING",
+	  "X": 387.0589,
+	  "Y": 791.1396,
+	  "Z": 187.6935
+	},
+	{
+	  "owner": "LSSD",
+	  "textTag": "PALETO PROCESSING",
+	  "X": -452.251434,
+	  "Y": 6005.51563,
+	  "Z": 31.8409328
+	}
+]

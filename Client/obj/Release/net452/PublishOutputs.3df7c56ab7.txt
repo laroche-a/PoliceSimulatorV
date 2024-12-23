@@ -1,0 +1,4 @@
+C:\FXDev\POLSIM\Client\bin\Release\net452\publish\POLSIM.Client.net.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\publish\CitizenFX.Core.Client.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\publish\LemonUI.FiveM.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\publish\Newtonsoft.Json.dll

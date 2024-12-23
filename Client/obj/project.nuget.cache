@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "O4Yn9kWaCVjz/qYjVWtlQtp9yjda6AoyclnLQDAM6ISn+QGMa9tTtUDR5BCWQDJ2g12LuD96mEF62yHWnaIKLw==",
+  "success": true,
+  "projectFilePath": "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.core.client\\1.0.8385\\citizenfx.core.client.1.0.8385.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\lemonui.fivem\\2.1.1\\lemonui.fivem.2.1.1.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net452\\1.0.3\\microsoft.netframework.referenceassemblies.net452.1.0.3.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.framework.client\\0.2.3\\citizenfx.framework.client.0.2.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json' 12.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.5.2"
+      ]
+    }
+  ]
+}

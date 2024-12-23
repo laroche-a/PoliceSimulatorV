@@ -1,0 +1,11 @@
+C:\FXDev\POLSIM\Client\bin\Release\net452\POLSIM.Client.net.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\CitizenFX.Core.Client.dll
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.csproj.AssemblyReference.cache
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.AssemblyInfoInputs.cache
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.AssemblyInfo.cs
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.csproj.CoreCompileInputs.cache
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.csproj.CopyComplete
+C:\FXDev\POLSIM\Client\obj\Release\net452\POLSIM.Client.net.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\LemonUI.FiveM.dll
+C:\FXDev\POLSIM\Client\bin\Release\net452\Newtonsoft.Json.dll

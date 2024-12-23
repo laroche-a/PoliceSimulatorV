@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj": {}
+  },
+  "projects": {
+    "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj",
+        "projectName": "POLSIM.Client",
+        "projectPath": "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\FXDev\\POLSIM\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net452"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\alexa\\Downloads": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net452": {
+            "targetAlias": "net452",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net452": {
+          "targetAlias": "net452",
+          "dependencies": {
+            "CitizenFX.Core.Client": {
+              "target": "Package",
+              "version": "[1.0.*, )"
+            },
+            "LemonUI.FiveM": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "downloadDependencies": [
+            {
+              "name": "CitizenFX.Framework.Client",
+              "version": "[0.2.3, 0.2.3]"
+            }
+          ],
+          "frameworkReferences": {
+            "CitizenFX.Framework.Client": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

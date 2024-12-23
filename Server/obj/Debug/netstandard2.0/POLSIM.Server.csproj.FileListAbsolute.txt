@@ -1,0 +1,10 @@
+C:\FXDev\POLSIM\Server\bin\Debug\netstandard2.0\POLSIM.Server.deps.json
+C:\FXDev\POLSIM\Server\bin\Debug\netstandard2.0\POLSIM.Server.net.dll
+C:\FXDev\POLSIM\Server\bin\Debug\netstandard2.0\POLSIM.Server.net.pdb
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.csproj.AssemblyReference.cache
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.AssemblyInfoInputs.cache
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.AssemblyInfo.cs
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.csproj.CoreCompileInputs.cache
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.net.dll
+C:\FXDev\POLSIM\Server\obj\Debug\netstandard2.0\POLSIM.Server.net.pdb

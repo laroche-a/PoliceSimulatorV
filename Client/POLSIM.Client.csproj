@@ -1,0 +1,14 @@
+﻿<Project Sdk="CitizenFX.Sdk.Client/0.2.3">
+    <ItemGroup>
+        <Compile Include="../Shared/**/*.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="LemonUI.FiveM" Version="2.1.1" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>..\..\..\Users\alexa\Downloads\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,285 @@
+[
+    {
+        "DeptNameFull": "Los Santos Police Department",
+        "DeptNameShort": "LSPD",
+        "DeptLogo": "Departments/LSPD/lspdLogo.png",
+        "Divisions": [
+            {
+                "Id": "Division1",
+                "Name": "Operations Bureau: Mission Row Patrol Division",
+                "DivisionIcon": "Departments/LSPD/division_icons/missionrow.png"
+            },
+            {
+                "Id": "Division2",
+                "Name": "Operations Bureau: Traffic Division",
+                "DivisionIcon": "Departments/LSPD/division_icons/traffic.png"
+            },
+            {
+                "Id": "Division3",
+                "Name": "Metropolitan Division",
+                "DivisionIcon": "Departments/LSPD/division_icons/metro.png"
+            },
+            {
+                "Id": "Division4",
+                "Name": "Air Support Division",
+                "DivisionIcon": "Departments/LSPD/division_icons/air.png"
+            }
+        ],
+        "Ranks": [
+            {"Id": "Rank1", "Name": "Police Officer I", "Icon": "Departments/LSPD/rank_icons/empty.png"},
+            {"Id": "Rank2", "Name": "Police Officer II", "Icon": "Departments/LSPD/rank_icons/empty.png"},
+            {"Id": "Rank3", "Name": "Police Officer III", "Icon": "Departments/LSPD/rank_icons/police_officer_III.png"},
+            {"Id": "Rank4", "Name": "Police Officer III+1", "Icon": "Departments/LSPD/rank_icons/police_officer_IIIplus.png"},
+            {"Id": "Rank5", "Name": "Detective I", "Icon": "Departments/LSPD/rank_icons/detective_I.png"},
+            {"Id": "Rank6", "Name": "Detective II", "Icon": "Departments/LSPD/rank_icons/detective_II.png"},
+            {"Id": "Rank7", "Name": "Detective III", "Icon": "Departments/LSPD/rank_icons/detective_III.png"},
+            {"Id": "Rank8", "Name": "Sergeant I", "Icon": "Departments/LSPD/rank_icons/sergeant_I.png"},
+            {"Id": "Rank9", "Name": "Sergeant II", "Icon": "Departments/LSPD/rank_icons/sergeant_II.png"},
+            {"Id": "Rank10", "Name": "Lieutenant I", "Icon": "Departments/LSPD/rank_icons/lieutenant.png"},
+            {"Id": "Rank11", "Name": "Lieutenant II", "Icon": "Departments/LSPD/rank_icons/lieutenant.png"},
+            {"Id": "Rank12", "Name": "Captain I", "Icon": "Departments/LSPD/rank_icons/captain.png"},
+            {"Id": "Rank13", "Name": "Captain II", "Icon": "Departments/LSPD/rank_icons/captain.png"},
+            {"Id": "Rank14", "Name": "Captain III", "Icon": "Departments/LSPD/rank_icons/captain.png"},
+            {"Id": "Rank15", "Name": "Commander", "Icon": "Departments/LSPD/rank_icons/commander.png"}
+        ],
+        "BlipSprite": "1",
+        "BlipColour": "3",
+        "StationBlips": [
+            { "X": 425.1, "Y": -979.5, "Z": 30.7 }
+        ],
+        "LockerRooms": [
+            { "X": 450.0, "Y": -990.0, "Z": 30.0 },
+			{ "X": 849.4801, "Y": -1284.41223, "Z": 28.004755 }
+        ],
+        "AllowedWeapons": [
+            {
+                "WeaponName": "Beretta M9",
+                "WeapHash": 453432689,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Taser",
+                "WeapHash": 911657153,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Police Baton",
+                "WeapHash": 1737195953,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Colt LE6920",
+                "WeapHash": 4208062921,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Remington 870",
+                "WeapHash": 487013001,
+                "Ammo": 80,
+                "MagSize": 15
+            }
+        ]
+    },
+    {
+        "DeptNameFull": "Los Santos Sheriff's Department",
+        "DeptNameShort": "LSSD",
+        "DeptLogo": "Departments/LSSD/lssdLogo.png",
+        "Divisions": [
+            {
+                "Id": "Division1",
+                "Name": "Patrol Operations",
+                "DivisionIcon": "Departments/LSSD/division_icons/patrol.png"
+            }
+        ],
+        "Ranks": [
+            {"Id": "Rank1", "Name": "Deputy Sheriff Trainee", "Icon": "Departments/LSSD/rank_icons/empty.png"},
+            {"Id": "Rank2", "Name": "Deputy Sheriff", "Icon": "Departments/LSSD/rank_icons/empty.png"},
+            {"Id": "Rank3", "Name": "Deputy Sheriff Bonus I", "Icon": "Departments/LSSD/rank_icons/deputysheriff.png"},
+            {"Id": "Rank4", "Name": "Deputy Sheriff Bonus II", "Icon": "Departments/LSSD/rank_icons/deputysheriff.png"},
+            {"Id": "Rank5", "Name": "Sergeant", "Icon": "Departments/LSSD/rank_icons/sergeant.png"},
+            {"Id": "Rank6", "Name": "Lieutenant", "Icon": "Departments/LSSD/rank_icons/lieutenant.png"},
+            {"Id": "Rank7", "Name": "Captain", "Icon": "Departments/LSSD/rank_icons/captain.png"},
+            {"Id": "Rank8", "Name": "Area Commander", "Icon": "Departments/LSSD/rank_icons/areacommander.png"},
+            {"Id": "Rank9", "Name": "Division Chief", "Icon": "Departments/LSSD/rank_icons/divisionchief.png"},
+            {"Id": "Rank10", "Name": "Assistant Sheriff", "Icon": "Departments/LSSD/rank_icons/asst_sheriff.png"},
+            {"Id": "Rank11", "Name": "Undersheriff", "Icon": "Departments/LSSD/rank_icons/undersheriff.png"},
+            {"Id": "Rank12", "Name": "Sheriff", "Icon": "Departments/LSSD/rank_icons/sheriff.png"}
+        ],
+        "BlipSprite": "1",
+        "BlipColour": "3",
+        "StationBlips": [
+            { "X": 425.1, "Y": -979.5, "Z": 30.7 }
+        ],
+        "LockerRooms": [
+            { "X": -447.248474, "Y": 6009.73145, "Z": 31.7163734 },
+			{ "X": 1849.78369, "Y": 3688.58057, "Z": 34.26708 },
+			{ "X": 369.6605, "Y": -1607.86621, "Z": 29.2919369 }
+        ],
+        "AllowedWeapons": [
+            {
+                "WeaponName": "Beretta M9",
+                "WeapHash": 453432689,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Taser",
+                "WeapHash": 911657153,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Police Baton",
+                "WeapHash": 1737195953,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Colt LE6920",
+                "WeapHash": 4208062921,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Remington 870",
+                "WeapHash": 487013001,
+                "Ammo": 80,
+                "MagSize": 15
+            }
+        ]
+    },
+    {
+        "DeptNameFull": "San Andreas Highway Patrol",
+        "DeptNameShort": "SAHP",
+        "DeptLogo": "Departments/SAHP/sahpLogo.png",
+        "Divisions": [
+            {
+                "Id": "Division1",
+                "Name": "Inland Division",
+                "DivisionIcon": "Departments/SAHP/division_icons/division.png"
+            },
+            {
+                "Id": "Division2",
+                "Name": "Metro Division",
+                "DivisionIcon": "Departments/SAHP/division_icons/division.png"
+            }
+        ],
+        "Ranks": [
+            {"Id": "Rank1", "Name": "Officer", "Icon": "Departments/SAHP/rank_icons/empty.png"},
+            {"Id": "Rank2", "Name": "Sergeant", "Icon": "Departments/SAHP/rank_icons/sergeant.png"},
+            {"Id": "Rank3", "Name": "Lieutenant", "Icon": "Departments/SAHP/rank_icons/lieutenant.png"},
+            {"Id": "Rank4", "Name": "Captain", "Icon": "Departments/SAHP/rank_icons/captain.png"},
+            {"Id": "Rank5", "Name": "Assistant Chief", "Icon": "Departments/SAHP/rank_icons/asstchief.png"},
+            {"Id": "Rank6", "Name": "Chief", "Icon": "Departments/SAHP/rank_icons/chief.png"},
+			{"Id": "Rank7", "Name": "Assistant Commissioner", "Icon": "Departments/SAHP/rank_icons/asst-comm.png"},
+			{"Id": "Rank8", "Name": "Deputy Commissioner", "Icon": "Departments/SAHP/rank_icons/dep-comm.png"},
+			{"Id": "Rank9", "Name": "Commissioner", "Icon": "Departments/SAHP/rank_icons/comm.png"}
+        ],
+        "BlipSprite": "1",
+        "BlipColour": "3",
+        "StationBlips": [
+            { "X": 425.1, "Y": -979.5, "Z": 30.7 }
+        ],
+        "LockerRooms": [
+            { "X": 450.0, "Y": -990.0, "Z": 30.0 },
+			{ "X": 849.4801, "Y": -1284.41223, "Z": 28.004755 }
+        ],
+        "AllowedWeapons": [
+            {
+                "WeaponName": "Beretta M9",
+                "WeapHash": 453432689,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Taser",
+                "WeapHash": 911657153,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Police Baton",
+                "WeapHash": 1737195953,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Colt LE6920",
+                "WeapHash": 4208062921,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Remington 870",
+                "WeapHash": 487013001,
+                "Ammo": 80,
+                "MagSize": 15
+            }
+        ]
+    },
+    {
+        "DeptNameFull": "Drug Observation Agency",
+        "DeptNameShort": "DOA",
+        "DeptLogo": "Departments/DOA/doaLogo.png",
+        "Divisions": [
+            {
+                "Id": "Division1",
+                "Name": "Los Santos Division",
+                "DivisionIcon": "Departments/DOA/division_icons/division.png"
+            }
+        ],
+        "Ranks": [
+            {"Id": "Rank1", "Name": "Agent Trainee", "Icon": "Departments/DOA/rank_icons/empty.png"},
+            {"Id": "Rank2", "Name": "Special Agent", "Icon": "Departments/DOA/rank_icons/empty.png"},
+            {"Id": "Rank3", "Name": "Senior Special Agent", "Icon": "Departments/DOA/rank_icons/empty.png"},
+            {"Id": "Rank4", "Name": "Special Agent in Charge", "Icon": "Departments/DOA/rank_icons/empty.png"},
+            {"Id": "Rank5", "Name": "Chief of Staff", "Icon": "Departments/DOA/rank_icons/empty.png"},
+            {"Id": "Rank6", "Name": "Administrator", "Icon": "Departments/DOA/rank_icons/empty.png"}
+        ],
+        "BlipSprite": "1",
+        "BlipColour": "3",
+        "StationBlips": [
+            { "X": 425.1, "Y": -979.5, "Z": 30.7 }
+        ],
+        "LockerRooms": [
+            { "X": 450.0, "Y": -990.0, "Z": 30.0 },
+			{ "X": 849.4801, "Y": -1284.41223, "Z": 28.004755 }
+        ],
+        "AllowedWeapons": [
+            {
+                "WeaponName": "Beretta M9",
+                "WeapHash": 453432689,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Taser",
+                "WeapHash": 911657153,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Police Baton",
+                "WeapHash": 1737195953,
+                "Ammo": 25,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Colt LE6920",
+                "WeapHash": 4208062921,
+                "Ammo": 100,
+                "MagSize": 20
+            },
+            {
+                "WeaponName": "Remington 870",
+                "WeapHash": 487013001,
+                "Ammo": 80,
+                "MagSize": 15
+            }
+        ]
+    }
+]

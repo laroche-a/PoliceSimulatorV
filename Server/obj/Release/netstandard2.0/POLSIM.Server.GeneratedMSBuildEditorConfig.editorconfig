@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = POLSIM.Server
+build_property.ProjectDir = C:\FXDev\POLSIM\Server\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

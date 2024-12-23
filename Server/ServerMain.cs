@@ -188,9 +188,6 @@ namespace POLSIM.Server
             Debug.WriteLine("\u001b[91m / ___/ /_/ / /___\\ \\_/ // /|_/ /\u001b[0m");
             Debug.WriteLine($"\u001b[91m/_/   \\____/____/___/___/_/  /_/  v. {version}\u001b[0m");
             Debug.WriteLine(" ");
-            Debug.WriteLine("URL: https://police-simulator-v.tebex.io/");
-            Debug.WriteLine("Discord: https://discord.gg/K5HfTVK4jc");
-            Debug.WriteLine(" ");
 
 
             LoadWhitelistedIdentifiers();

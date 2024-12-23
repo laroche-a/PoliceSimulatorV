@@ -1,4 +1,7 @@
-﻿/*using CitizenFX.Core;
+﻿// Opticom Script
+// Turns nearby traffic lights green
+
+/*using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 using CitizenFX.Core.Native;
 

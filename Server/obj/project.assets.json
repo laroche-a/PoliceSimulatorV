@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CitizenFX.Core.Server/1.0.8292": {
+      "CitizenFX.Core.Server/1.0.10230": {
         "type": "package",
         "compile": {
           "lib/netstandard20/CitizenFX.Core.Server.dll": {
@@ -68,14 +68,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Server/1.0.8292": {
-      "sha512": "EAuSX3SdsY54WI4pF0qX/r8vi2wcwjXQbjwHC61x2DBGSwX4KfcAI1BlL14gaBm5WD43Jcmck9Ioq9qmix9eFA==",
+    "CitizenFX.Core.Server/1.0.10230": {
+      "sha512": "B92x/0kdRQkTzMzxPToDlNdY3zvVCWESfvja9bwi6xILccVVuQejWzBP4hKaMAgJ2AFFPo2AVuibs09c4Zto4g==",
       "type": "package",
-      "path": "citizenfx.core.server/1.0.8292",
+      "path": "citizenfx.core.server/1.0.10230",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.server.1.0.8292.nupkg.sha512",
+        "citizenfx.core.server.1.0.10230.nupkg.sha512",
         "citizenfx.core.server.nuspec",
         "lib/net45/CitizenFX.Core.Server.dll",
         "lib/net45/CitizenFX.Core.Server.xml",
@@ -336,7 +336,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexa\\.nuget\\packages\\": {}
+    "C:\\Users\\alexa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -347,14 +348,19 @@
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
       "outputPath": "C:\\FXDev\\POLSIM\\Server\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\PROGRAM FILES\\DOTNET\\library-packs": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Users\\alexa\\Downloads": {},
         "https://api.nuget.org/v3/index.json": {}
@@ -369,7 +375,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "netstandard2.0": {
@@ -405,7 +417,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\PROGRAM FILES\\DOTNET\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

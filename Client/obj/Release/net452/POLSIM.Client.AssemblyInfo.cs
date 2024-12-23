@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POLSIM.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a03ed78629bcc744e90987062bf01f43e37a338c")]
 [assembly: System.Reflection.AssemblyProductAttribute("POLSIM.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POLSIM.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

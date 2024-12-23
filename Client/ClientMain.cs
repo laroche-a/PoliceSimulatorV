@@ -301,10 +301,10 @@ namespace POLSIM.Client
         int selectedOption = 0;
         const int optionsToShow = 3;
 
-        // move over system
-        private const string INVISIBLE_OBJECT_MODEL = "prop_mp_cone_01"; // Example model, replace with a truly invisible model if available
+        // Move Over System
+        private const string INVISIBLE_OBJECT_MODEL = "prop_mp_cone_01";
         private int invisibleObjectHandle;
-        private Vector3 objectPosition = new Vector3(0, 0, 0); // Set initial position
+        private Vector3 objectPosition = new Vector3(0, 0, 0);
 
         private TimerBarProgress timerBar;
         private TimerBarCollection timerBarCollection;
@@ -342,7 +342,7 @@ namespace POLSIM.Client
         private Dictionary<int, List<Item>> searchedVehicleItems;
 
         private bool lockerRoomActive = false;
-        private Camera lockerRoomCam;
+        private Camera lockerRoomCam; // Camera for the locker rooms
         List<Vector3> lockerRoomCoordinates = new List<Vector3>(); // list of locker room coordinates, received from server. only contains players own agency
 
         private static Dictionary<string, string> requests = new Dictionary<string, string>();
@@ -363,7 +363,7 @@ namespace POLSIM.Client
         (uint)WeaponHash.CompactRifle
     };
 
-        // List of assault rifles hashs, used for locker room animations
+        // List of pistol hashs, used for locker room animations
         private List<uint> pistols = new List<uint>
     {
         (uint)WeaponHash.Pistol,
@@ -379,8 +379,6 @@ namespace POLSIM.Client
     };
 
 
-
-        //List<int> activeBlips = new List<int>(); // List 
 
         private bool IsPlayerOnDuty()
         {
@@ -1134,22 +1132,19 @@ namespace POLSIM.Client
             { "u_m_y_zombie_01", 0xAC4B4506 }
         };
 
+
+        // Menus
         private readonly ObjectPool pool = new ObjectPool();
         private readonly NativeMenu menu = new NativeMenu("Interaction", "Traffic Stop Interaction Menu");
         private readonly NativeMenu pedMenu = new NativeMenu("Interaction", "Pedestrian Interaction Menu");
         private readonly NativeMenu clothingMenu = new NativeMenu("Clothing Menu", "Department outfits");
         private readonly NativeMenu factionClothingMenu = new NativeMenu("Faction Clothing Menu", "My Department's outfits");
-
         private readonly NativeMenu lockerRoomMenu = new NativeMenu("Locker Room", "Select your uniform and loadout");
-
         private readonly NativeMenu vehicleMenu = new NativeMenu("Vehicle Menu", "Vehicle Interaction Menu");
         private readonly NativeMenu adminMenu = new NativeMenu("Admin Menu", "POLSIM Admin Menu");
-
         private readonly NativeMenu factionGear = new NativeMenu("Faction Equipment", "Faction Equipment");
 
         public Ped playerPed = null;
-
-        //private Queue<Tuple<Vector3, float>> coordinatesAndHeadings = new Queue<Tuple<Vector3, float>>();
 
         private bool isPulledOver = false;
         private bool pursuitActive = false;
@@ -1160,6 +1155,7 @@ namespace POLSIM.Client
         private int maxTrafficEventTime = 720000; // 12 mins
         private float pursuitChance = 0.1f;
 
+        // NPC Behavior Variables
         private float suspectAggression = 0.1f;
         private float firearmChance = 0.1f;
         private float meleeChance = 0.1f;
@@ -1183,7 +1179,6 @@ namespace POLSIM.Client
 
         // Define a variable to keep track of the time the 'E' key has been held
         int eKeyPressedTime = 0;
-        //bool isHoldingE = false;
         bool isPlayerAdmin = false;
 
         // Ped Interaction
@@ -1198,10 +1193,10 @@ namespace POLSIM.Client
         private PostalManager postalManager;
         private int updateInterval = 4500; // Update interval in milliseconds (3 seconds)
         private DateTime lastUpdateTime = DateTime.MinValue;
+
         // Define a variable to track whether the traffic stop is active
         bool isTrafficStopActive = false;
         DateTime stopStartTime = DateTime.MinValue;
-
         Vehicle targetVehicle = null;
 
         public ClientMain()
@@ -1209,45 +1204,28 @@ namespace POLSIM.Client
             Debug.WriteLine("------------------------------------------");
             Debug.WriteLine($"POLSIM v.{version} loaded.");
 
-            /*Vector3 playerPosition2 = Game.PlayerPed.Position;
-            AddStaticText(playerPosition2, "TEST");*/
-
-           // LoadInvisibleObjectModel();
-
             RegisterNuiCallbackType("pedImage:update");
             RegisterNuiCallbackType("mdcExited");
-
-            // WebSocket replacement
             RegisterNuiCallbackType("sendToClient");
-            EventHandlers["__cfx_nui:sendToClient"] += new Action<IDictionary<string, object>>(OnDataReceivedFromNUI);
-            EventHandlers["nameCheckResponse"] += new Action<string>(OnNameCheckResponse);
 
-            EventHandlers["setPlayerAsAdmin"] += new Action(SetPlayerAsAdmin);
-
-            EventHandlers["arrestListUpdateResponse"] += new Action<string>(OnArrestListUpdateResponse);
 
             // Initialize dictionary to store searched items for each ped
             searchedPedItems = new Dictionary<int, List<Item>>();
             searchedVehicleItems = new Dictionary<int, List<Item>>();
 
-            // Register an event handler for the button click event from NUI
+            // EventHandlers
+            EventHandlers["__cfx_nui:sendToClient"] += new Action<IDictionary<string, object>>(OnDataReceivedFromNUI);
+            EventHandlers["nameCheckResponse"] += new Action<string>(OnNameCheckResponse);
+            EventHandlers["setPlayerAsAdmin"] += new Action(SetPlayerAsAdmin);
+            EventHandlers["arrestListUpdateResponse"] += new Action<string>(OnArrestListUpdateResponse);
             EventHandlers["buttonClicked"] += new Action(HandleButtonClicked);
             EventHandlers["mdcExited"] += new Action(GiveControlBackAfterMDCExit);
-
-            // Server Events
             EventHandlers["outboundCoordsUpdate"] += new Action<Vector3>(OnOutboundCoordsUpdate);
             EventHandlers["serverEvent:RandomIdentityResponse"] += new Action<string>(OnRandomIdentityResponse);
             EventHandlers["serverEvent:SubmitPlayerProfile"] += new Action<string>(OnPlayerReceiveProfile);
-
             EventHandlers["departmentData"] += new Action<string>(OnDepartmentDataReceived);
-
-            //EventHandlers["clientEvent:ReceiveDepartmentData"] += new Action<string>(OnReceiveDepartmentData);
-
             EventHandlers["playerSpawned"] += new Action(OnPlayerSpawned);
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
-
-            //EventHandlers["serverEvent:SubmitLockerCoordinates"] += new Action<string>(OnReceiveLockerCoordinates);
-
             EventHandlers["dispatchData"] += new Action<string, string, int, string, string, int>(OnDispatchDataReceived);
             EventHandlers["updateRecentCallsPage"] += new Action<string>(updateRecentCallsPage);
             EventHandlers["ReceivePedNetIds"] += new Action<string>(ReceivePedNetIds);
@@ -1260,21 +1238,10 @@ namespace POLSIM.Client
             RegisterCommand("reqtow", new Action<int, List<object>, string>(ToggleRequestTowCommand), false);
             RegisterCommand("toglic", new Action<int, List<object>, string>(ToggleLicenseVisibilityCommand), false);
             RegisterCommand("showeupmenu", new Action(ShowClothingMenu), false);
-
-            //RegisterCommand("polsimadmin", new Action(ShowAdminMenu), false);
-
-            //RegisterCommand("randevent", new Action(HandleGenerateRandomEventCommand), false);
-            //RegisterCommand("savepos", new Action<int, List<object>, string>(SavePlayerPosition), false);
             RegisterCommand("forceduty", new Action<int, List<object>, string>((source, args, raw) =>
             {
                 ToggleDuty();
             }), false);
-            
-            /*RegisterCommand("testlocker", new Action<int, List<object>, string>((source, args, raw) =>
-            {
-                HandleLockerRoom();
-            }), false);*/
-
 
             try
             {
@@ -1383,71 +1350,6 @@ namespace POLSIM.Client
             {
                 Debug.WriteLine($"An error occurred while loading/processing the file: {ex.Message}");
             }
-
-
-            // Loading coordinates.json
-            /*try
-            {
-                string filePath = "coordinates.json";
-                string resource = GetCurrentResourceName();
-
-                if (resource != null && filePath != null)
-                {
-                    string fileContents = LoadResourceFile(resource, filePath);
-
-                    if (fileContents != null)
-                    {
-                        int fileSizeInBytes = fileContents.Length;
-                        double fileSizeInKilobytes = fileSizeInBytes / 1024.0;
-                        double roundedFileSizeInKilobytes = Math.Round(fileSizeInKilobytes, 2); // Round to 2 decimal places
-                        Debug.WriteLine($"Loaded {filePath} Size: {roundedFileSizeInKilobytes}kB.");
-
-
-                        // Deserialize JSON array
-                        //var jails = JsonConvert.DeserializeObject<List<Jail>>(fileContents);
-
-                        this.calloutblips = JsonConvert.DeserializeObject<List<CalloutData>>(fileContents);
-
-                        if (calloutblips != null)
-                        {
-                            int numberOfJails = calloutblips.Count; // Count the number of loaded jails
-                            Debug.WriteLine($"Number of loaded coordinates: {numberOfJails}");
-                            Debug.WriteLine("------------------------------------------");
-                            foreach (var calloutData in calloutblips)
-                            {
-                                double x = calloutData.X;
-                                double y = calloutData.Y;
-                                double z = calloutData.Z;
-
-                                Vector3 calloutLocation = new Vector3(calloutData.X, calloutData.Y, calloutData.Z);
-                                Blip calloutBlip = World.CreateBlip(calloutLocation);
-                                // Set the appropriate blip sprite, name, and any other properties as needed
-                                calloutBlip.Sprite = BlipSprite.GTAOMission;
-                                calloutBlip.Name = "Callout"; // Set the blip name
-                                                              // Add the blip to the list
-                                calloutDebugBlips.Add(calloutBlip);
-                            }
-                        }
-                        else
-                        {
-                            Debug.WriteLine("Failed to deserialize JSON into Jail list.");
-                        }
-
-                    }
-                    else
-                    {
-                        Debug.WriteLine("File contents are null. Check if the file exists or if there was an issue loading it.");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine("Resource name or file path is null. Check if they are properly initialized.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"An error occurred while loading/processing the file: {ex.Message}");
-            }*/
 
             // Loading jails.json with error catching
             try
@@ -3019,7 +2921,10 @@ namespace POLSIM.Client
             }
         }
 
-
+        // =================================================================================
+        // OnNameCheckResponse()
+        // 
+        // =================================================================================
         private void OnNameCheckResponse(string response)
         {
             Debug.WriteLine($"[DATA] Received response from server: {response}");
@@ -3032,6 +2937,10 @@ namespace POLSIM.Client
         });
         }
 
+        // =================================================================================
+        // OnArrestListUpdateResponse()
+        // Updates the arrest list NUI html page
+        // =================================================================================
         private void OnArrestListUpdateResponse(string response)
         {
             Debug.WriteLine($"[DATA] Received response from server: {response}");
@@ -3044,56 +2953,14 @@ namespace POLSIM.Client
         });
         }
 
+        // =================================================================================
+        // SendNUIMessage()
+        // Sends data to nuiHandler.lua
+        // =================================================================================
         private void SendNUIMessage(IDictionary<string, object> message)
         {
-            // Assuming SendNUIMessage is a method to send messages to NUI in your client-side code
             API.SendNuiMessage(Newtonsoft.Json.JsonConvert.SerializeObject(message));
         }
-
-        /*private void OnReceiveDepartmentData(string departmentDataJson)
-        {
-            try
-            {
-
-                // Deserialize the JSON string into a list of DepartmentData objects
-                var departmentDataList = JsonConvert.DeserializeObject<List<DepartmentData>>(departmentDataJson);
-
-                foreach (var departmentData in departmentDataList)
-                {
-                    // Log the received department data for debugging purposes
-                    Debug.WriteLine($"Receiving: {departmentData.DeptNameFull}");
-
-                    // Prepare the data to be sent to NUI
-                    var departmentUpdateData = new Dictionary<string, object>
-            {
-                { "departmentName", departmentData.DeptNameFull },
-                { "deptLogo", departmentData.DeptLogo },
-                { "divisions", departmentData.Divisions }, // Use the divisions list directly
-                { "ranks", departmentData.Ranks } // Use the ranks list directly
-            };
-
-                    // Send the data to NUI (browser)
-                    SendNUIMessage(new Dictionary<string, object>
-            {
-                { "type", "myDepartmentUpdate" },
-                { "data", departmentUpdateData }
-            });
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error parsing department data: {ex.Message}");
-            }
-        }*/
-
-
-
-
-
-
-
-
-
 
         // =================================================================================
         // RequestModel()
@@ -3108,6 +2975,10 @@ namespace POLSIM.Client
             await Delay(100);
         }
 
+        // =================================================================================
+        // ShowNotification()
+        // fs_notification
+        // =================================================================================
         private async Task ShowNotification(string text, string color, string textcolor, int time)
         {
             Debug.WriteLine("ShowNotification()");
@@ -3115,6 +2986,7 @@ namespace POLSIM.Client
             TriggerEvent("fs_dependencies:ShowNotification", text, color, textcolor, time);
             await Delay(0);
         }
+
 
         private async Task ShowInteraction(string text, string color, string textcolor)
         {
@@ -3225,7 +3097,10 @@ namespace POLSIM.Client
 
         }
 
-
+        // =================================================================================
+        // updateRecentCallsPage()
+        // 
+        // =================================================================================
         private void updateRecentCallsPage(string jsonString)
         {
             try
@@ -3371,6 +3246,10 @@ namespace POLSIM.Client
             return eventProbabilities.Keys.Last(); // Return the last event if none is selected
         }
 
+        // =================================================================================
+        // Draw3dText()
+        // Draws 3d text (i.e locker rooms)
+        // =================================================================================
         public Task Draw3dText(float x, float y, float z, string text, float size = 1.0f, int r = 255, int g = 255, int b = 255, int a = 215)
         {
             float _x = 0;
@@ -3402,7 +3281,10 @@ namespace POLSIM.Client
             return Task.FromResult(0);
         }
 
-        // Method to add a 3D text at a static location
+        // =================================================================================
+        // AddStaticText()
+        // 
+        // =================================================================================
         public void AddStaticText(Vector3 position, string text)
         {
             if (!_staticTexts.ContainsKey(position))
@@ -3411,7 +3293,10 @@ namespace POLSIM.Client
             }
         }
 
-        // Method to draw 3D texts that are within range
+        // =================================================================================
+        // DrawStaticTextsInRange()
+        // 
+        // =================================================================================
         public async Task DrawStaticTextsInRange()
         {
             //Vector3 playerPosition = GetEntityCoords(PlayerPedId(), true);
@@ -3432,7 +3317,10 @@ namespace POLSIM.Client
             }
         }
 
-        // Helper method to clear the drawn text from the screen
+        // =================================================================================
+        // ClearDraw3dText()
+        // 
+        // =================================================================================
         private void ClearDraw3dText()
         {
             SetTextEntry("STRING");
@@ -3527,6 +3415,10 @@ namespace POLSIM.Client
             }
         }
 
+        // =================================================================================
+        // GetNearbyVehicles()
+        // 
+        // =================================================================================
         private List<Vehicle> GetNearbyVehicles(Vector3 position, float radius)
         {
             List<Vehicle> vehicles = new List<Vehicle>();
@@ -3876,7 +3768,10 @@ namespace POLSIM.Client
             }
         }
 
-        // Determine suspect behavior when using takedown menu (E)
+        // =================================================================================
+        // DetermineSuspectBehavior()
+        // 
+        // =================================================================================
         private async void DetermineSuspectBehavior(Ped suspect)
         {
             Random random = new Random();
@@ -3992,6 +3887,11 @@ namespace POLSIM.Client
             npcStatus[suspect.Handle].HasSurrendered = true;
         }
 
+
+        // =================================================================================
+        // DrawProgressBar()
+        // Draws a progress bar, used when taking down suspects, etc
+        // =================================================================================
         private void DrawProgressBar(float x, float y, float width, float height, double progress)
         {
             // Background (gray bar)
@@ -4000,11 +3900,19 @@ namespace POLSIM.Client
             DrawRect(x - width / 2 + (float)(width * progress) / 2, y, (float)(width * progress), height, 0, 153, 204, 200);
         }
 
+        // =================================================================================
+        // DrawRect()
+        // Draws a progress bar, used when taking down suspects, etc
+        // =================================================================================
         private void DrawRect(float x, float y, float width, float height, int r, int g, int b, int a)
         {
             CitizenFX.Core.Native.API.DrawRect(x, y, width, height, r, g, b, a);
         }
 
+        // =================================================================================
+        // HandleOptionSelection()
+        // 
+        // =================================================================================
         private void HandleOptionSelection(int option)
         {
             switch (option)
@@ -4117,7 +4025,10 @@ namespace POLSIM.Client
             }
         }
 
-
+        // =================================================================================
+        // UpdatePlayerInfo()
+        // 
+        // =================================================================================
         private void UpdatePlayerInfo()
         {
             Vector3 playerPosition = Game.PlayerPed.Position;
@@ -4138,6 +4049,10 @@ namespace POLSIM.Client
             crossRoadName = GetStreetNameFromHashKey(crossingRoadHash);
         }
 
+        // =================================================================================
+        // HandlePedDragging()
+        // 
+        // =================================================================================
         private void HandlePedDragging()
         {
             Ped playerPed = Game.Player.Character;
@@ -4147,6 +4062,10 @@ namespace POLSIM.Client
             }
         }
 
+        // =================================================================================
+        // HandleTrafficStop()
+        // Handles pulling over NPC vehicles and displaying the traffic stop menu
+        // =================================================================================
         private async Task HandleTrafficStop()
         {
             if (isDriverStoppedAtTrafficStop)
@@ -4172,6 +4091,10 @@ namespace POLSIM.Client
             }
         }
 
+        // =================================================================================
+        // HandlePulledOverDriver()
+        // 
+        // =================================================================================
         private void HandlePulledOverDriver()
         {
             if (driver != null && driver.Exists())
@@ -4180,6 +4103,10 @@ namespace POLSIM.Client
             }
         }
 
+        // =================================================================================
+        // FindAndHandleNearbyVehicle()
+        // 
+        // =================================================================================
         private async Task FindAndHandleNearbyVehicle()
         {
             int maxDistance = 15; // Maximum distance to search for nearby vehicles
@@ -4221,6 +4148,10 @@ namespace POLSIM.Client
             }
         }
 
+        // =================================================================================
+        // HandleVehicleInteractionMenu()
+        // 
+        // =================================================================================
         private void HandleVehicleInteractionMenu()
         {
             Vector3 playerPosition = Game.Player.Character.Position;
@@ -4309,11 +4240,11 @@ namespace POLSIM.Client
         }
 
 
-            // =================================================================================
-            // OnRandomIdentityResponse()
-            // Runs code when receiving a random identity string from the server's identities.json
-            // =================================================================================
-            private void OnRandomIdentityResponse(string randomIdentityJson)
+        // =================================================================================
+        // OnRandomIdentityResponse()
+        // Runs code when receiving a random identity string from the server's identities.json
+        // =================================================================================
+        private void OnRandomIdentityResponse(string randomIdentityJson)
         {
             try
             {
@@ -4515,11 +4446,6 @@ namespace POLSIM.Client
             await Delay(0);
         }
 
-
-
-
-
-
         // =================================================================================
         // GetIdentityFromServer()
         // Checks a ped's gender then requests a random identity from the server according to gender
@@ -4716,19 +4642,6 @@ namespace POLSIM.Client
                 Debug.WriteLine($"An error occurred: {ex.Message}");
                 // Handle the exception as needed
             }
-        }
-
-
-        public static async Task<IdentityPedTexture> GetPedHeadshotTexture(int ped)
-        {
-            var handle = RegisterPedheadshot_3(ped);
-
-            while (!IsPedheadshotReady(handle))
-                await Delay(0);
-
-            var texture = GetPedheadshotTxdString(handle);
-
-            return new IdentityPedTexture { Handle = handle, TextureString = texture };
         }
 
         // =================================================================================
@@ -5070,29 +4983,9 @@ namespace POLSIM.Client
             Debug.WriteLine("Ressources released.");
         }
 
-        private bool GetRoadSidePosition(Vector3 targetPosition, ref Vector3 roadSidePosition)
-        {
-            // Check if the target position is on a road
-            if (Function.Call<bool>(Hash.IS_POINT_ON_ROAD, targetPosition.X, targetPosition.Y, targetPosition.Z))
-            {
-                roadSidePosition = targetPosition;
-                return true;
-            }
-
-            // If not on a road, find the nearest road point
-            Vector3 nearestRoadPoint = Function.Call<Vector3>(Hash.GET_CLOSEST_ROAD, targetPosition.X, targetPosition.Y, targetPosition.Z, 0, 0);
-            if (nearestRoadPoint != Vector3.Zero)
-            {
-                roadSidePosition = nearestRoadPoint;
-                return true;
-            }
-
-            return false; // Failed to find a suitable road side position
-        }
-
         // =================================================================================
         // DisableAllInputs()
-        // Currently unused
+        // 
         // =================================================================================
         private void DisableAllInputs()
         {
@@ -5328,6 +5221,10 @@ namespace POLSIM.Client
 
         }
 
+        // =================================================================================
+        // DeleteBlipAfterDelay()
+        // Deletes blipTraffic after 30 seconds
+        // =================================================================================
         private async Task DeleteBlipAfterDelay()
         {
             await Delay(30000); // Delay for 30 seconds

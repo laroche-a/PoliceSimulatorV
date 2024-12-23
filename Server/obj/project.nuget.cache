@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0Khgec0iqK5K7mEaGm3yMHAKkUVqh/nyB258lO+xvvD3/gDNoGkpNfJCXwFkCpq3/ErZtJNwJb2spa3M/myw3A==",
+  "dgSpecHash": "oUfVGxfZB6w=",
   "success": true,
   "projectFilePath": "C:\\FXDev\\POLSIM\\Server\\POLSIM.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.core.server\\1.0.8292\\citizenfx.core.server.1.0.8292.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.core.server\\1.0.10230\\citizenfx.core.server.1.0.10230.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

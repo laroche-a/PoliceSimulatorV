@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "O4Yn9kWaCVjz/qYjVWtlQtp9yjda6AoyclnLQDAM6ISn+QGMa9tTtUDR5BCWQDJ2g12LuD96mEF62yHWnaIKLw==",
+  "dgSpecHash": "k5btoGg2Knw=",
   "success": true,
   "projectFilePath": "C:\\FXDev\\POLSIM\\Client\\POLSIM.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.core.client\\1.0.8385\\citizenfx.core.client.1.0.8385.nupkg.sha512",
+    "C:\\Users\\alexa\\.nuget\\packages\\citizenfx.core.client\\1.0.10230\\citizenfx.core.client.1.0.10230.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\lemonui.fivem\\2.1.1\\lemonui.fivem.2.1.1.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net452\\1.0.3\\microsoft.netframework.referenceassemblies.net452.1.0.3.nupkg.sha512",

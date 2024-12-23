@@ -1,7 +1,7 @@
 # Building FiveM Server Ressource
--Open POLSIM.sln in Visual Studio to edit code
+-Open POLSIM.sln in Visual Studio to edit code.
 
--Run build.cmd to create FiveM server ressource
+-Run build.cmd to create FiveM server ressource.
 
 -Files will be placed in the dist folder.
 

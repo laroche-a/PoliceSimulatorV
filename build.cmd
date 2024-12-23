@@ -21,8 +21,6 @@ copy /y jails.json dist
 copy /y items.json dist
 copy /y arrests.json dist
 copy /y users.json dist
-
-
 copy /y server-settings.json dist
 
 xcopy /y /e /s Client\bin\Release\net452\publish\* dist\Client\

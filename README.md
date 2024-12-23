@@ -1,5 +1,10 @@
 # POLSIM V
 
+# BUILDING FIVEM RESSOURCE
+-Open POLSIM.sln in Visual Studio to edit code
+-Run build.cmd to create FiveM server ressource
+-Files will be placed in the dist folder.
+
 ![Description](https://forum-cfx-re.akamaized.net/original/5X/f/1/f/2/f1f2532b0fc481ea99442f45a9f2ded4e691bce7.jpeg)
 
 Police Simulator V is a mod that aims to bring a realistic PvE policing experience to FiveM.

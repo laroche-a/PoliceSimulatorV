@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+   ___  ____  __   __________  ___
+  / _ \\/ __ \\/ /  / __/  _/  |/  /
+ / ___/ /_/ / /___\\ \\_/ // /|_/ /
+/_/   \\____/____/___/___/_/  /_/
+
+ Police Simulator V
+ PostalManager.cs
+ FiveM ressource
+
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CitizenFX.Core;

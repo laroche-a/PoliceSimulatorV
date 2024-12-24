@@ -1,4 +1,16 @@
-﻿using CitizenFX.Core;
+﻿/*
+   ___  ____  __   __________  ___
+  / _ \\/ __ \\/ /  / __/  _/  |/  /
+ / ___/ /_/ / /___\\ \\_/ // /|_/ /
+/_/   \\____/____/___/___/_/  /_/
+
+ Police Simulator V
+ DepartmentManager.cs
+ FiveM ressource
+
+ */
+
+using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 using System;
 using System.Collections.Generic;

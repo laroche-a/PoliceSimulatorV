@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\FXDev\\POLSIM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B542B08E-8C6D-4A7E-B8A5-25CA5C0E1BE9}|Client\\POLSIM.Client.csproj|c:\\fxdev\\polsim\\client\\opticom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B542B08E-8C6D-4A7E-B8A5-25CA5C0E1BE9}|Client\\POLSIM.Client.csproj|solutionrelative:client\\opticom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B542B08E-8C6D-4A7E-B8A5-25CA5C0E1BE9}|Client\\POLSIM.Client.csproj|c:\\fxdev\\polsim\\client\\clientmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B542B08E-8C6D-4A7E-B8A5-25CA5C0E1BE9}|Client\\POLSIM.Client.csproj|solutionrelative:client\\clientmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{001B247F-6E01-4697-8F51-0B6FBE459D03}|Server\\POLSIM.Server.csproj|c:\\fxdev\\polsim\\server\\servermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{001B247F-6E01-4697-8F51-0B6FBE459D03}|Server\\POLSIM.Server.csproj|solutionrelative:server\\servermain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Opticom.cs",
-              "DocumentMoniker": "C:\\FXDev\\POLSIM\\Client\\Opticom.cs",
-              "RelativeDocumentMoniker": "Client\\Opticom.cs",
-              "ToolTip": "C:\\FXDev\\POLSIM\\Client\\Opticom.cs",
-              "RelativeToolTip": "Client\\Opticom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T20:23:31.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ClientMain.cs",
               "DocumentMoniker": "C:\\FXDev\\POLSIM\\Client\\ClientMain.cs",
               "RelativeDocumentMoniker": "Client\\ClientMain.cs",
               "ToolTip": "C:\\FXDev\\POLSIM\\Client\\ClientMain.cs",
               "RelativeToolTip": "Client\\ClientMain.cs",
-              "ViewState": "AgIAACsJAAAAAAAAAAAAAEEJAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAN4EAAAAAAAAAAAwwPUEAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T02:03:25.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServerMain.cs",
-              "DocumentMoniker": "C:\\FXDev\\POLSIM\\Server\\ServerMain.cs",
-              "RelativeDocumentMoniker": "Server\\ServerMain.cs",
-              "ToolTip": "C:\\FXDev\\POLSIM\\Server\\ServerMain.cs",
-              "RelativeToolTip": "Server\\ServerMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T02:03:29.088Z",
+              "WhenOpened": "2024-12-24T12:16:15.554Z",
               "EditorCaption": ""
             }
           ]

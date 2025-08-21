@@ -1,59 +1,57 @@
 # Police Simulator V for FiveM
 
+> ⚠️ **WARNING**  
+> This is an early version/prototype release and is **NOT recommended for use on public servers**. Use at your own risk in development or private testing environments only. Features may be unstable and subject to significant changes.
 
+Police Simulator V delivers an immersive, realistic PvE policing experience for [FiveM](https://fivem.net/), the popular Grand Theft Auto V multiplayer modification platform. Transform your roleplay server into a dynamic law enforcement environment with comprehensive police simulation features.
 
+## 🚨 Key Features
 
-https://github.com/user-attachments/assets/7df71e20-1aaa-47fa-b094-c34c00d23c94
+### Core Policing Experience
+- **🎯 Dynamic Callout System** - Respond to incidents across **379+ unique locations** with varied scenarios
+- **💾 Zero External Dependencies** - No external database required - seamless plug-and-play installation
+- **🎛️ Fully Customizable** - Configure callout frequency, postal ranges, NPC profiles, search items, and UI elements
 
+### Advanced Law Enforcement Tools
+- **📋 Comprehensive Background Checks** - Access detailed NPC profiles including firearms licenses, active warrants, and criminal history
+- **📊 Integrated Reporting System** - Track and document all law enforcement activities with built-in arrest reports
+- **💻 Mobile Data Computer (MDC)** - Modern interface for callout management, background checks, and report submission
 
+### Realistic Traffic & Pursuit Systems
+- **🚗 Intelligent Traffic Stops** - NPCs realistically observe traffic laws and pull over safely
+- **🏃 Dynamic Vehicle Pursuits** - Suspects exhibit realistic evasion behavior with collision avoidance
+- **🎲 Random Traffic Events** - Unpredictable scenarios including vehicle breakdowns and equipment failures
+- **🚔 Felony Stop Procedures** - Tactical suspect extraction system for high-risk situations
 
-Police Simulator V is a mod that aims to bring a realistic PvE policing experience to FiveM.
+### Professional Documentation & Integration
+- **📄 Digital Driver Documents** - Request and verify licenses and vehicle registration
+- **📍 Postal Code Integration** - Advanced dispatching with location-based callout management  
+- **👮 EUP Menu Integration** - Customizable uniform and equipment management
+- **🚛 NPC Tow Services** - Automated impound system with AI tow truck dispatch
 
-:small_blue_diamond: No External Database Required.
+## 📸 Screenshots
 
-:small_blue_diamond: Callout System: Respond to callouts with 379+ unique locations.
+![Police Simulator V Interface](https://forum-cfx-re.akamaized.net/original/5X/f/1/f/2/f1f2532b0fc481ea99442f45a9f2ded4e691bce7.jpeg)
+![Mobile Data Computer](https://i.imgur.com/sy4QRtp.png)
+![Callout System](https://i.imgur.com/3MyAwCE.png)
+![Traffic Stop Interface](https://i.imgur.com/ByXa3rX.png)
 
-:small_blue_diamond: Highly Customizable: Customize callout frequency, whitelist callouts to a specific postal range, modify NPC identities, add items for vehicle & ped searches, customize jailing location, customize driver’s licenses, vehicle registration documents and Mobile Data Computer UI.
+## 🛠️ Installation & Setup
 
-:small_blue_diamond: Extended Ped Identities: When performing background checks on NPCs you will be able to view information such as firearms licenses, active warrants, previous events and much more.
+### Prerequisites
+- [FiveM Server](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/) (latest version recommended)
 
-:small_blue_diamond: Arrest Reporting System: Keep track of your law enforcement activities with the built-in arrest reporting system.
+### Building the Resource
 
-:small_blue_diamond: Random Traffic Events: Keep things unpredictable with random traffic events like broken windows and flat tires, etc.
+1. **Build the Resource**
+   ```bash
+   run build.cmd
+   ```
 
-:small_blue_diamond: Realistic Vehicle Pursuits: Evading drivers will try to avoid collisions and behave in a realistic manner.
-
-:small_blue_diamond: Realistic Traffic Stops: When pulling over drivers they won’t simply directly drive to a point and park, they will observe traffic laws and pull over to the side of the road realistically.
-
-:small_blue_diamond: Integrated Mobile Data Computer: View recent callouts, submit arrests reports, perform background checks.
-
-:small_blue_diamond: Driver Documents: Request documents such as driver’s licenses, vehicle registration.
-
-:small_blue_diamond: Felony Stops: Extract suspects out of vehicles in a realistic manner with the Felony Stop system.
-
-:small_blue_diamond: Postal Codes Integration: This mod integrates postal codes for dispatching purposes.
-
-:small_blue_diamond: EUP Menu Integration: Integrated & customizable EUP menu.
-
-:small_blue_diamond: Towtruck Support: Easily dispatch a NPC towtruck driver to your location and impound vehicles.
-
-![Description](https://forum-cfx-re.akamaized.net/original/5X/f/1/f/2/f1f2532b0fc481ea99442f45a9f2ded4e691bce7.jpeg)
-
-![Description](https://i.imgur.com/sy4QRtp.png)
-
-![Description](https://i.imgur.com/3MyAwCE.png)
-
-![Description](https://i.imgur.com/F69xv2y.png)
-
-![Description](https://i.imgur.com/ByXa3rX.png)
-
-
-# Building FiveM Server Ressource
--Open POLSIM.sln in Visual Studio to edit code.
-
--Run build.cmd to create FiveM server ressource.
-
--Files will be placed in the dist folder.
-
--Copy the dist folder to your FiveM server and add appropriate #ensure line to your server.cfg.
-
+2. **Deploy to Server**
+   - Compiled files will be generated in the `dist/` folder
+   - Copy the entire `dist/` folder contents to your FiveM server resources directory
+   - Add the following line to your `server.cfg`:
+   ```
+   ensure [resource-name]
+   ```

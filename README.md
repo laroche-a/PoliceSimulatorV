@@ -38,6 +38,8 @@ Police Simulator V delivers an immersive, realistic PvE policing experience for 
 
 ## 🛠️ Installation & Setup
 
+- For information about the .json config files, check the [Wiki](https://github.com/laroche-a/PoliceSimulatorV/wiki) page.
+
 ### Prerequisites
 - [FiveM Server](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/) (latest version recommended)
 

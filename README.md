@@ -3,7 +3,7 @@
 > ⚠️ **WARNING**  
 > This is an early version/prototype release and is **NOT recommended for use on public servers**. Use at your own risk in development or private testing environments only. Features may be unstable and subject to significant changes.
 
-Police Simulator V delivers an immersive, realistic PvE policing experience for [FiveM](https://fivem.net/), the popular Grand Theft Auto V multiplayer modification platform. Transform your roleplay server into a dynamic law enforcement environment with comprehensive police simulation features.
+Police Simulator V (PSV) delivers an immersive, realistic PvE policing experience for [FiveM](https://fivem.net/), the popular Grand Theft Auto V multiplayer modification platform. Transform your roleplay server into a dynamic law enforcement environment with comprehensive police simulation features.
 
 ## 🚨 Key Features
 
